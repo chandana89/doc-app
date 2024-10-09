@@ -25,6 +25,7 @@ Ensure you have the following installed on your machine:
    git clone https://github.com/chandana89/doc-app.git
    ```
 2. **Setup htdocs**
+   
    Replace **c:\xampp\htdocs** with the htdocs folder which is cloned with the repository.
    
 2. **MySQL database configuration**
@@ -40,9 +41,9 @@ Ensure you have the following installed on your machine:
   - Add database username, password and database name to **configDB.php** file in **c:\xampp\htdocs\config** folder.
     
      ```bash
-        define("DB_USER","root");
-	define("DB_PASS","");
-	define("DB_NAME","medi_connect");
+     define("DB_USER","root");
+     define("DB_PASS","");
+     define("DB_NAME","medi_connect");
       ```
   
 ### Access the Application
