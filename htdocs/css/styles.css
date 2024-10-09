@@ -1,0 +1,660 @@
+* {
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.add_prescription_body, .doctor_account_body, .doctor_home_body, .patients_info_body, .prescription_body, .about_doctor_body{
+  background-color: #f4f4f4;
+  background-image: url("../images/registration.jpg");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.history_body, .patient_account_body, .patient_home_body, .uploads_body, .about_patient_body, .book_appointment_body{
+  background-color: #f4f4f4;
+  background-image: url("../images/registration.jpg");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.register_wrapper {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.register_heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register_heading img {
+  width: 120px;
+}
+
+.register_heading h2 {
+  margin: 0;
+  color: #005f99;
+  font-size: x-large;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.col-25 {
+  width: 25%;
+  float: left;
+}
+
+.col-75 {
+  width: 75%;
+  float: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px; 
+  padding: 10px; 
+  font-size: 14px; 
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  resize: vertical;
+}
+
+.doctor_account_wrapper textarea {
+  width: 100%;
+  height: 200px; 
+  padding: 10px; 
+  font-size: 14px; 
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  resize: vertical;
+}
+.description-short {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: center;
+}
+
+input[type="submit"] {
+  background-color: #005f99;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+input[type="submit"]:hover {
+  background-color: #004872;
+}
+
+.required_input_field {
+  color: #ff0000;
+}
+
+.successMessage {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.successMessage.show {
+  display: block;
+}
+
+.custom_alert_info_register {
+  background-color: #b3ecff;
+  color: #0086b3;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.custom_alert_info_heading_register {
+  font-weight: bold;
+  color: #0086b3;
+}
+
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-flex;
+  background-color: #005f99;
+  color: white;
+  padding: 12px 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+button > i,
+button > span {
+  display: inline-block;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.errorMessage {
+  background-color: #ffcccb;
+  color: #990000;
+  font-weight: 700;
+}
+
+.custom_error_message {
+  font-weight: 300;
+  color: #b30000;
+}
+
+.custom_error_message_container span {
+  padding-left: 10px;
+}
+
+.successMessage {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  width: 10%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.5s ease-in-out transform;
+}
+
+.successMessage > span {
+  padding-left: 7px;
+}
+
+.successMessageHidden {
+  transform: translateX(250px);
+}
+
+.register_patient_body {
+  background-image: url("../images/registration.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.register_doctor_body {
+  background-image: url("../images/registration.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container_register {
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 10px;
+}
+
+.custom_alert_info_register {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 10px;
+  background-color: #b3ecff;
+  color: #0086b3;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.login_page_links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.login_body {
+  background-image: url("../images/login.jpeg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login_screen {
+  height: 100vh;
+}
+
+.login_wrapper {
+
+  margin-left: 50%;
+  margin-right: 5%;
+}
+
+.login_heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login_heading img {
+  width: 120px;
+}
+
+.login_heading {
+  margin: 0;
+  color: #005f99;
+}
+.container_login {
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  max-width: 90%;
+}
+
+
+.custom_alert_info_heading_register {
+  font-weight: 700;
+  color: #0086b3;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.datepicker-container {
+  margin-top: 30px;
+
+}
+.doctor_home_main .form-group {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-control {
+  border-radius: 4px;
+}
+
+
+.input-group {
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.add_prescription_wrapper, .doctor_account_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/registration.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f4f4f4;
+}
+
+.doctor_account_wrapper h2, .add_prescription_wrapper h2{
+  margin-top: 0;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 2px solid #005f99;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.prescription_wrapper h2{
+  margin-top: 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+
+
+.doctor_account_wrapper .form-container, .add_prescription_wrapper .form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.add_prescription_wrapper {
+  /* background-image: url("../images/addPrescription.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.doctor_account_wrapper .form-group label,.add_prescription_wrapper .form-group label {
+  font-weight: 600;
+}
+
+.doctor_account_wrapper .btn-primary,.add_prescription_wrapper .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+.doctor_account_wrapper .btn-primary:hover,.add_prescription_wrapper .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.prescription_body {
+  background-color: #f8f9fa;
+}
+
+.prescription_wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.short-description {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #777;
+}
+
+.view-more {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.view-more:hover {
+  text-decoration: underline;
+}
+
+.search-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+.datepicker {
+
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.datepicker-dropdown {
+  background-color: #f9f9f9;
+  border: 1px solid #0077b6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.datepicker table {
+  margin: 0;
+  width: 100%;
+}
+
+.datepicker thead {
+  border-radius: 8px 8px 0 0;
+}
+
+.datepicker th,
+.datepicker td {
+  text-align: center;
+  padding: 5px;
+}
+
+.datepicker .active {
+  background-color: #0077b6;
+  color: #fff !important;
+  border-radius: 50%;
+}
+
+.datepicker .day:hover {
+  background-color: #e6f7ff;
+  border-radius: 50%;
+}
+
+
+.datepicker-container .input-group .form-control,
+.input-group .input-group-text {
+  border-color: #0077b6;
+}
+
+.datepicker-container .input-group-text {
+  cursor: pointer;
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.datepicker-container .form-control:focus {
+  border-color: #005f99;
+  box-shadow: none;
+}
+
+
+.datepicker-table-container .appointment .table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.datepicker-table-container .appointment .table thead {
+  background-color: #007bff; 
+  color: #fff;
+}
+
+.datepicker-table-container .appointment .table th,
+.table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.datepicker-table-container .appointment .table th {
+  background-color: #c0d7fb; 
+  color: darkmagenta;
+}
+
+.datepicker-table-container .appointment .table td {
+  background-color: white; 
+  color: black;
+}
+
+
+.datepicker-table-container .appointment .table a {
+  color: #007bff;
+}
+
+.datepicker-table-container .appointment .table a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.datepicker-table-container .appointment p {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.about_contact_wrapper {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.about_contact_wrapper h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 2px solid #005f99;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.about_contact_wrapper p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about_contact_wrapper ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about_contact_wrapper ul li {
+  margin-bottom: 10px;
+}
+
+.about_contact_wrapper ul li strong {
+  font-weight: bold;
+}
+
+.about_contact_wrapper .contact_info {
+  background-color: #005f99;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
