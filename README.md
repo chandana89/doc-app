@@ -9,9 +9,9 @@ Follow the steps below to set up and run the application.
 - You can use the command apachectl stop to turn off the built-in web server on a Mac or Linux, or go to the Control Panel to turn it off on Windows.
 Ensure you have the following installed on your machine:
 - Download **XAMPP**, which includes MySQL: [Download XAMPP](https://www.apachefriends.org/index.html).
-- Run the XAMPP installer to install on the default c:\xampp (for Windows) or Applications/XAMPP (for Macs).
+- Run the XAMPP installer to install on the default **c:\xampp** (for Windows) or **Applications/XAMPP** (for Macs).
 - XAMPP Control Panel will be available on the Desktop.
-- c:\xampp is created, and the default website root is at c:\xampp\htdocs
+- **c:\xampp** is created, and the default website root is at **c:\xampp\htdocs**
 - Enable Apache and MySQL services (they will appear in the list of Services). 
 - Start Apache and MySQL.
 
@@ -25,19 +25,19 @@ Ensure you have the following installed on your machine:
    git clone https://github.com/chandana89/doc-app.git
    ```
 2. **Setup htdocs**
-   Replace c:\xampp\htdocs with the htdocs folder which is cloned with the repository.
+   Replace **c:\xampp\htdocs** with the htdocs folder which is cloned with the repository.
    
 2. **MySQL database configuration**
    - Browse [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)
-   - Create a new database named *medi_connect* or with any other name if you want.
-   - Open mediConnect.sql. Before executing the script, if you named the database differently then change the database name *medi_connect* to the database name created by you in the below lines of the script. 
+   - Create a new database named **medi_connect** or with any other name if you want.
+   - Open **mediConnect.sql**. Before executing the script, if you named the database differently then change the database name **medi_connect** to the database name created by you in the below lines of the script. 
       
       ```bash
       CREATE DATABASE IF NOT EXISTS medi_connect; 
       USE medi_connect; 
       ```
   - Copy and paste the script on to the SQL tab of the newly created database and click on GO. 
-  - Add database username, password and database name to configDB.php file in c:\xampp\htdocs\config folder.
+  - Add database username, password and database name to **configDB.php** file in **c:\xampp\htdocs\config** folder.
     
      ```bash
         define("DB_USER","root");
